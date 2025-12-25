@@ -1,0 +1,101 @@
+<style>
+/* ==== SITEMAP STYLE ==== */
+#sitemap-wrapper {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: auto;
+}
+.sitemap-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.label-title {
+  font-size: 20px;
+  margin-top: 30px;
+  border-left: 5px solid #ff9800;
+  padding-left: 10px;
+}
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+.post-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+.post-list li a {
+  text-decoration: none;
+  color: #333;
+}
+.post-list li a:hover {
+  color: #ff9800;
+}
+.post-date {
+  font-size: 12px;
+  color: #777;
+  display: block;
+}
+</style>
+
+<div id="sitemap-wrapper">
+  <div class="sitemap-title">📌 Sitemap</div>
+  <div id="sitemap-content">Loading sitemap...</div>
+</div>
+
+<script>
+var blogUrl = "https://web.alhikmah.eu.org";
+var maxResults = 500;
+
+function loadLabels() {
+  var url = blogUrl + "/feeds/posts/default?alt=json&max-results=" + maxResults;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      var posts = data.feed.entry;
+      var labels = {};
+
+      posts.forEach(post => {
+        if (post.category) {
+          post.category.forEach(cat => {
+            var label = cat.term;
+            if (!labels[label]) labels[label] = [];
+            labels[label].push(post);
+          });
+        }
+      });
+
+      renderSitemap(labels);
+    });
+}
+
+function renderSitemap(labels) {
+  var html = "";
+  for (var label in labels) {
+    html += `<h2 class="label-title">${label}</h2>`;
+    html += `<ul class="post-list">`;
+
+    labels[label].forEach(post => {
+      var title = post.title.$t;
+      var link = post.link.find(l => l.rel === "alternate").href;
+      var date = new Date(post.published.$t).toLocaleDateString("id-ID", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      });
+
+      html += `
+        <li>
+          <a href="${link}">${title}</a>
+          <span class="post-date">🗓 ${date}</span>
+        </li>`;
+    });
+
+    html += `</ul>`;
+  }
+  document.getElementById("sitemap-content").innerHTML = html;
+}
+
+loadLabels();
+</script>
