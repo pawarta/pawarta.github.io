@@ -1,5 +1,6 @@
 name: Deploy Pawarta to GitHub Pages
 
+
 on:
   # Berjalan otomatis setiap ada push ke branch main atau master
   push:
