@@ -1,0 +1,3 @@
+git add .
+git commit -m "Add full 69 categories with 30 articles each and SEO sitemaps"
+git push origin main
