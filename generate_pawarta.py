@@ -2,6 +2,7 @@ import os
 import xml.etree.ElementTree as ET
 from datetime import datetime
 
+
 CATEGORIES = [
     "home", "market", "finance", "macro", "micro", "economy", "explainers",
     "manufacturing", "property", "health", "education", "lifestyle", "hospitality",
@@ -13,7 +14,7 @@ CATEGORIES = [
     "selebritis", "country", "dki", "diy", "jabar", "jatim", "jateng", "aceh",
     "papua", "kalimantan", "sumatra", "sulawesi", "bali", "asia", "afrika",
     "australia", "rusia", "eropa", "amerika", "ai", "teknologi", "astronomi",
-    "zodiak", "maps"
+    "zodiak","matematika","ipa","ips","biologi","sejarah","fisika","bahasa indonesia","bahasa inggris","bahasa arab","bahasa jawa","sd","smp","sma","smk","d3","sarjana","tools","software","generator","ai","berita","gambar","penerbangan","lokal","mancanegara","maps"
 ]
 
 TOTAL_ARTICLES_PER_CAT = 30
