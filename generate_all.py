@@ -307,6 +307,10 @@ def generate_html_content(category, title_suffix, file_num):
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({{ duration: 1000, once: true }});</script>
+
+<script defer src="https://s.clickiocdn.com/t/250695/di.js"></script>
+<amp-pixel src="https://up.clickiocdn.com/utr/vc/?s=250695&d=phone&t=amp&u=CANONICAL_URL&pt=TITLE&r=RANDOM" layout="nodisplay" hidden="hidden"></amp-pixel>
+
 </body>
 </html>
 """
@@ -336,6 +340,10 @@ def generate_index_content(category):
     <a href="sitemap.html" class="btn btn-dark">Sitemap HTML</a>
     <a href="sitemap.xml" class="btn btn-secondary">Sitemap XML</a>
 </div>
+
+<script defer src="https://s.clickiocdn.com/t/250695/di.js"></script>
+<amp-pixel src="https://up.clickiocdn.com/utr/vc/?s=250695&d=phone&t=amp&u=CANONICAL_URL&pt=TITLE&r=RANDOM" layout="nodisplay" hidden="hidden"></amp-pixel>
+
 </body>
 </html>
 """
