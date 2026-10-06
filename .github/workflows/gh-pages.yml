@@ -1,0 +1,43 @@
+name: Deploy Pawarta to GitHub Pages
+
+on:
+  # Berjalan otomatis setiap ada push ke branch main atau master
+  push:
+  branches: [ main, master ]
+
+  # Bisa juga dijalankan secara manual dari tab Actions di GitHub
+  workflow_dispatch:
+
+# Hak akses untuk token GitHub Actions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Hanya izinkan satu deployment berjalan bersamaan
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Mengunggah seluruh folder root (termasuk semua kategori, file html, dan .nojekyll)
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
