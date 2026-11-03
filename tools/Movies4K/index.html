@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies 4K - Portal Download & Streaming Film Terbaru</title>
+  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"
+     crossorigin="anonymous"></script><script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+<meta name="google-site-verification" content="JoJtB-h4pYrGaoeykP1Wzfa_cOQk_b8va15bDz_82O8" /><meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc">
+<meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GN5PGKKM3T');
+</script>
+    
+    <!-- Favicon & Icons -->
+<link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+<link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+<link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+<!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#E50914',
+                            dark: '#141414',
+                            card: '#1F1F1F',
+                            gold: '#F5C518'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- HEADER & NAVIGASI -->
+    <header class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <a href="#" class="text-2xl font-extrabold tracking-wider text-brand-red flex items-center gap-1">
+                    <i class="fa-solid fa-clapperboard text-brand-gold"></i>MOVIES<span class="text-white">BOX</span>
+                </a>
+            </div>
+
+            <!-- Search Bar (Desktop) -->
+            <div class="hidden md:flex items-center bg-brand-card border border-gray-700 rounded-full px-4 py-1.5 w-72 focus-within:border-brand-red transition">
+                <i class="fa-solid fa-magnifying-glass text-gray-400 mr-2 text-sm"></i>
+                <input type="text" id="searchInput" placeholder="Cari film favoritmu..." class="bg-transparent border-none outline-none text-sm w-full text-white placeholder-gray-400">
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                <a href="#" class="text-brand-red hover:text-red-400 transition">Beranda</a>
+                <a href="#movies" class="text-gray-300 hover:text-white transition">Film Terbaru</a>
+                <a href="#categories" class="text-gray-300 hover:text-white transition">Kategori</a>
+                <a href="https://sfile.co/invite/358103" target="_blank" class="text-brand-gold hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-gift"></i> Bonus Sfile
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="lg:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-card border-b border-gray-800 px-4 pt-2 pb-4 space-y-3">
+            <input type="text" placeholder="Cari film..." class="w-full bg-brand-dark border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-red">
+            <a href="#" class="block text-brand-red font-medium">Beranda</a>
+            <a href="#movies" class="block text-gray-300">Film Terbaru</a>
+            <a href="#categories" class="block text-gray-300">Kategori</a>
+            <a href="https://sfile.co/invite/358103" target="_blank" class="block text-brand-gold font-medium">Bonus Sfile</a>
+        </div>
+    </header>
+
+    <!-- KATEGORI BADGE BAR -->
+    <div id="categories" class="bg-brand-card/50 border-b border-gray-800/60 py-3">
+        <div class="max-w-7xl mx-auto px-4 flex space-x-3 overflow-x-auto scrollbar-none text-xs sm:text-sm">
+            <button onclick="filterCategory('All')" class="category-btn px-4 py-1.5 rounded-full bg-brand-red text-white font-medium shrink-0 transition">Semua</button>
+            <button onclick="filterCategory('Action')" class="category-btn px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium shrink-0 transition">Action</button>
+            <button onclick="filterCategory('Horror')" class="category-btn px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium shrink-0 transition">Horror</button>
+            <button onclick="filterCategory('Drama')" class="category-btn px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium shrink-0 transition">Drama</button>
+            <button onclick="filterCategory('Sci-Fi')" class="category-btn px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium shrink-0 transition">Sci-Fi</button>
+            <button onclick="filterCategory('Animation')" class="category-btn px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium shrink-0 transition">Animation</button>
+            <button onclick="filterCategory('Thriller')" class="category-btn px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium shrink-0 transition">Thriller</button>
+        </div>
+    </div>
+
+    <!-- BANNER / HERO SECTION -->
+    <section class="relative bg-gradient-to-r from-black via-brand-dark to-black py-12 md:py-20 border-b border-gray-800 overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="max-w-xl space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-red/20 text-brand-red border border-brand-red/40 rounded-full text-xs font-semibold">
+                    <i class="fa-solid fa-fire"></i> Trending Hari Ini #1
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">Avatar: The Way of Water</h1>
+                <p class="text-gray-300 text-sm sm:text-base line-clamp-3">Jake Sully hidup bersama keluarga barunya di planet Pandora. Ketika ancaman kembali datang, Jake harus bekerja sama dengan Neytiri dan tentara ras Na'vi untuk melindungi rumah mereka.</p>
+                <div class="flex items-center gap-4 text-xs sm:text-sm text-gray-400 font-medium">
+                    <span class="flex items-center gap-1 text-brand-gold"><i class="fa-solid fa-star"></i> 8.2/10</span>
+                    <span><i class="fa-regular fa-clock"></i> 3h 12m</span>
+                    <span class="px-2 py-0.5 bg-gray-800 border border-gray-700 rounded text-xs text-white">1080p BluRay</span>
+                </div>
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <button onclick="openDownloadModal('Avatar: The Way of Water', '2.4 GB', '1080p BluRay', 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=600')" class="px-6 py-3 bg-brand-red hover:bg-red-700 text-white font-bold rounded-xl shadow-lg shadow-brand-red/30 flex items-center gap-2 transition transform active:scale-95 text-sm">
+                        <i class="fa-solid fa-download"></i> Download Sekarang
+                    </button>
+                    <button onclick="openDownloadModal('Avatar: The Way of Water (Trailer)', '150 MB', '720p HD', 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=600')" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl border border-gray-700 flex items-center gap-2 transition text-sm">
+                        <i class="fa-solid fa-play"></i> Tonton Trailer
+                    </button>
+                </div>
+            </div>
+            <div class="shrink-0">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=400" alt="Featured Movie" class="w-64 sm:w-72 rounded-2xl shadow-2xl border-2 border-gray-800 object-cover aspect-[2/3]">
+            </div>
+        </div>
+    </section>
+
+    <!-- DAFTAR FILM TERBARU (GRID LAYOUT) -->
+    <main id="movies" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl sm:text-2xl font-bold border-l-4 border-brand-red pl-3 text-white">Film & Series Terbaru</h2>
+            <span class="text-xs sm:text-sm text-gray-400">Update setiap hari</span>
+        </div>
+
+        <!-- Movie Grid -->
+        <div id="movieGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+            <!-- Data Film dimuat via JS -->
+        </div>
+    </main>
+
+    <!-- MODAL DETAIL & DOWNLOAD -->
+    <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
+        <div class="bg-brand-card border border-gray-700 w-full max-w-md rounded-2xl overflow-hidden shadow-2xl relative transform transition-all scale-95 opacity-0" id="modalContent">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white bg-black/40 hover:bg-black/70 w-8 h-8 rounded-full flex items-center justify-center transition z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Header Image -->
+            <div class="relative h-48 bg-cover bg-center" id="modalImgBg" style="background-image: url('');">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-brand-card/40 to-transparent"></div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 -mt-10 relative z-10 space-y-4">
+                <div>
+                    <span id="modalCategory" class="px-2.5 py-0.5 bg-brand-red/20 text-brand-red border border-brand-red/40 rounded-full text-xs font-semibold">Action</span>
+                    <h3 id="modalTitle" class="text-xl font-bold text-white mt-2">Judul Film</h3>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 text-xs bg-brand-dark p-3 rounded-xl border border-gray-800">
+                    <div>
+                        <span class="text-gray-400 block">Resolusi:</span>
+                        <strong id="modalResolution" class="text-white">1080p BluRay</strong>
+                    </div>
+                    <div>
+                        <span class="text-gray-400 block">Ukuran File:</span>
+                        <strong id="modalSize" class="text-white">1.8 GB</strong>
+                    </div>
+                </div>
+
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Unduh file film kecepatan tinggi melalui server aman kami. Silakan pilih tombol unduh di bawah ini untuk memulai proses download.
+                </p>
+
+                <!-- Tombol Aksi Utama (Mengarah ke Sfile secara berotasi) -->
+                <div class="pt-2">
+                    <a id="modalDownloadBtn" href="#" target="_blank" class="w-full py-3 bg-brand-red hover:bg-red-700 text-white font-bold rounded-xl shadow-lg shadow-brand-red/30 flex items-center justify-center gap-2 transition text-sm">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> Unduh File Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER & REFERRAL BANNER -->
+    <footer class="bg-brand-card border-t border-gray-800 mt-16 text-gray-400 text-sm">
+        <!-- Referral Floating/Banner Section -->
+        <div class="bg-gradient-to-r from-yellow-600/20 via-brand-card to-yellow-600/20 border-b border-gray-800 py-6 px-4 text-center">
+            <div class="max-w-4xl mx-auto space-y-2">
+                <h4 class="text-white font-bold text-base sm:text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-hand-holding-dollar text-brand-gold"></i> Dukung & Dapatkan Bonus Khusus!
+                </h4>
+                <p class="text-xs sm:text-sm text-gray-300">Bergabunglah melalui tautan undangan khusus kami untuk mendukung perkembangan situs MoviesBox.</p>
+                <div class="pt-2">
+                    <a href="https://sfile.co/invite/358103" target="_blank" class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-gold hover:bg-yellow-500 text-black font-bold rounded-xl shadow-md transition text-xs sm:text-sm">
+                        <i class="fa-solid fa-link"></i> https://sfile.co/invite/358103
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div>
+                <a href="#" class="text-xl font-extrabold tracking-wider text-brand-red flex items-center justify-center md:justify-start gap-1">
+                    <i class="fa-solid fa-clapperboard text-brand-gold"></i>MOVIES<span class="text-white">BOX</span>
+                </a>
+                <p class="text-xs text-gray-500 mt-1">© 2026 MoviesBox Portal. Hak Cipta Dilindungi.</p>
+            </div>
+            <div class="flex space-x-6 text-xs">
+                <a href="#" class="hover:text-white transition">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white transition">Syarat & Ketentuan</a>
+                <a href="#" class="hover:text-white transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTERAKTIF & SCRIPT AKSES TERPANDU -->
+    <script>
+        // Data Sfile Rotasi (Sesuai Permintaan)
+        const sfileLinks = [
+            "https://sfile.co/DAZxOwTsDOX",
+            "https://sfile.co/RPm9PLMB2Qk",
+            "https://sfile.co/RjLIQgG9q0I"
+        ];
+        let linkIndex = 0;
+
+        function getNextSfileLink() {
+            const link = sfileLinks[linkIndex];
+            linkIndex = (linkIndex + 1) % sfileLinks.length; // Rotasi bergantian
+            return link;
+        }
+
+        // Data Dummy Film
+        const moviesData = [
+            { title: "John Wick: Chapter 4", category: "Action", year: 2023, rating: "8.5", size: "1.9 GB", resolution: "1080p", image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=400" },
+            { title: "The Nun II", category: "Horror", year: 2023, rating: "6.8", size: "1.4 GB", resolution: "1080p", image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=400" },
+            { title: "Oppenheimer", category: "Drama", year: 2023, rating: "8.9", size: "2.5 GB", resolution: "1080p", image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&q=80&w=400" },
+            { title: "Interstellar", category: "Sci-Fi", year: 2014, rating: "8.7", size: "2.2 GB", resolution: "1080p", image: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&q=80&w=400" },
+            { title: "Spider-Man: Across the Spider-Verse", category: "Animation", year: 2023, rating: "8.8", size: "1.7 GB", resolution: "1080p", image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&q=80&w=400" },
+            { title: "Extraction 2", category: "Action", year: 2023, rating: "7.1", size: "1.6 GB", resolution: "1080p", image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=400" }
+        ];
+
+        // Render Film ke Grid
+        function renderMovies(filter = "All", searchQuery = "") {
+            const grid = document.getElementById("movieGrid");
+            grid.innerHTML = "";
+
+            const filtered = moviesData.filter(movie => {
+                const matchCategory = filter === "All" || movie.category === filter;
+                const matchSearch = movie.title.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchCategory && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500">Film tidak ditemukan.</div>`;
+                return;
+            }
+
+            filtered.forEach(movie => {
+                const card = document.createElement("div");
+                card.className = "bg-brand-card border border-gray-800 rounded-xl overflow-hidden group hover:border-brand-red transition flex flex-col justify-between shadow-md";
+                card.innerHTML = `
+                    <div class="relative overflow-hidden aspect-[2/3] cursor-pointer" onclick="openDownloadModal('${movie.title}', '${movie.size}', '${movie.resolution} BluRay', '${movie.image}')">
+                        <img src="${movie.image}" alt="${movie.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute top-2 right-2 bg-black/70 backdrop-blur px-2 py-0.5 rounded text-xs font-bold text-brand-gold flex items-center gap-1">
+                            <i class="fa-solid fa-star text-[10px]"></i> ${movie.rating}
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-brand-red px-2 py-0.5 rounded text-[10px] font-semibold text-white">
+                            ${movie.resolution}
+                        </div>
+                    </div>
+                    <div class="p-3 flex flex-col justify-between flex-grow">
+                        <div>
+                            <span class="text-[10px] text-gray-400 uppercase tracking-wider">${movie.category} • ${movie.year}</span>
+                            <h3 class="font-bold text-sm text-white line-clamp-1 mt-0.5" title="${movie.title}">${movie.title}</h3>
+                        </div>
+                        <button onclick="openDownloadModal('${movie.title}', '${movie.size}', '${movie.resolution} BluRay', '${movie.image}')" class="mt-3 w-full py-2 bg-gray-800 hover:bg-brand-red text-white font-semibold rounded-lg text-xs flex items-center justify-center gap-1.5 transition">
+                            <i class="fa-solid fa-download"></i> Download
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Category Handler
+        function filterCategory(category) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-red', 'text-white');
+                btn.classList.add('bg-gray-800', 'text-gray-300');
+            });
+            event.target.classList.remove('bg-gray-800', 'text-gray-300');
+            event.target.classList.add('bg-brand-red', 'text-white');
+
+            const currentSearch = document.getElementById("searchInput").value;
+            renderMovies(category, currentSearch);
+        }
+
+        // Search Input Listener
+        document.getElementById("searchInput").addEventListener("input", (e) => {
+            renderMovies("All", e.target.value);
+        });
+
+        // Modal Controls
+        function openDownloadModal(title, size, resolution, image) {
+            const modal = document.getElementById("downloadModal");
+            const modalContent = document.getElementById("modalContent");
+            
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalSize").innerText = size;
+            document.getElementById("modalResolution").innerText = resolution;
+            document.getElementById("modalImgBg").style.backgroundImage = `url('${image}')`;
+            
+            // Set link Sfile berotasi otomatis
+            const assignedLink = getNextSfileLink();
+            document.getElementById("modalDownloadBtn").href = assignedLink;
+
+            modal.classList.remove("hidden");
+            setTimeout(() => {
+                modalContent.classList.remove("scale-95", "opacity-0");
+                modalContent.classList.add("scale-100", "opacity-100");
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("downloadModal");
+            const modalContent = document.getElementById("modalContent");
+            
+            modalContent.classList.remove("scale-100", "opacity-100");
+            modalContent.classList.add("scale-95", "opacity-0");
+            setTimeout(() => {
+                modal.classList.add("hidden");
+            }, 200);
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // ==========================================
+        // SCRIPT AKSES TERPANDU / PENGAMAN HALAMAN
+        // ==========================================
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Mencegah klik kanan untuk keamanan konten
+            document.addEventListener("contextmenu", (e) => {
+                e.preventDefault();
+            });
+
+            // 2. Mencegah shortcut inspector / developer tools (F12, Ctrl+Shift+I, Ctrl+U, dll)
+            document.addEventListener("keydown", (e) => {
+                if (
+                    e.key === "F12" ||
+                    (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+                    (e.ctrlKey && e.key === "U")
+                ) {
+                    e.preventDefault();
+                    alert("Akses Terpandu: Fitur ini dinonaktifkan di halaman ini.");
+                }
+            });
+
+            // 3. Deteksi jika halaman kehilangan fokus (pindah tab / minimize)
+            window.addEventListener("blur", () => {
+                console.log("Pengguna meninggalkan halaman / beralih tab.");
+            });
+        });
+
+        // Initialize Render
+        renderMovies();
+    </script>
+</body>
+</html>
